@@ -187,14 +187,14 @@ SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_traccar&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
-[contributors]: https://github.com/hassio-addons/addon-traccar/graphs/contributors
+[contributors]: https://github.com/sam-ward/addon-traccar/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [forum]: https://community.home-assistant.io/t/home-assistant-community-add-on-traccar/81407?u=frenck
 [frenck]: https://github.com/frenck
-[issue]: https://github.com/hassio-addons/addon-traccar/issues
+[issue]: https://github.com/sam-ward/addon-traccar/issues
 [mariadb]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_mariadb
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-traccar/releases
+[releases]: https://github.com/sam-ward/addon-traccar/releases
 [semver]: https://semver.org/spec/v2.0.0.html
 [traccar]: https://www.traccar.org
