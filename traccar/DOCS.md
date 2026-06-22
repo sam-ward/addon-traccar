@@ -31,6 +31,17 @@ comparison to installing any other Home Assistant add-on.
 1. Check the logs of the "Traccar" add-on to see if everything went well.
 1. Click the "OPEN WEB UI" button.
 
+## Upgrading from v6.1 or earlier
+
+Traccar v6.2 removed support for the `config.default` directive. If you are
+upgrading from an older version of this add-on, your existing `traccar.xml`
+will be automatically backed up to `traccar.v5.12.xml` in the add-on
+configuration folder on first start, and replaced with a fresh default config.
+
+If you had custom settings in your old `traccar.xml` (extra protocols, custom
+database settings, etc.), you will need to re-apply them to the new file after
+the first start.
+
 ## Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
@@ -108,9 +119,9 @@ By default, only the OsmAnd protocol (used by the Traccar Apps) and the API
 are enabled. If you want more protocols, you can do so, by adding entries
 to your `traccar.xml` file in the add-on configuration folder.
 
-A list if all entries can be found here:
+A list of all entries can be found here:
 
-<https://github.com/hassio-addons/addon-traccar/blob/main/traccar/rootfs/etc/traccar/traccar.xml#L22>
+<https://github.com/sam-ward/addon-traccar/blob/main/traccar/rootfs/etc/traccar/traccar.xml>
 
 To find out which protocol your device uses, please refer to the Traccar
 website: <https://www.traccar.org/devices/>
