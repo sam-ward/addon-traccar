@@ -16,6 +16,16 @@ if ! bashio::fs.directory_exists '/config/traccar.xml' \
         || bashio::exit.nok "Failed to migrate Traccar configuration"
 fi
 
+# Back up old-format config (pre-v6.2, uses config.default) and replace with
+# the current template. Sentinel file presence means migration already ran.
+if ! bashio::fs.file_exists '/config/traccar.v5.12.xml' \
+    && bashio::fs.file_exists '/config/traccar.xml'; then
+  mv /config/traccar.xml /config/traccar.v5.12.xml \
+      || bashio::exit.nok "Failed to backup Traccar configuration"
+  cp /etc/traccar/traccar.xml /config/traccar.xml \
+      || bashio::exit.nok "Failed to migrate Traccar configuration"
+fi
+
 if ! bashio::fs.file_exists "/config/traccar.xml"; then
     cp /etc/traccar/traccar.xml /config/traccar.xml
 else
